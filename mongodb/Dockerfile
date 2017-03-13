@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     sudo apt-get update && \
-    sudo apt-get -y install mongodb-org && \
+    sudo apt-get -y --force-yes install mongodb-org && \
     sudo service mongod start && \
     sudo npm install -g @angular/cli && \
     sudo npm install express-generator -g && \
