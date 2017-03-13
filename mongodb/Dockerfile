@@ -1,8 +1,7 @@
 FROM codenvy/debian_jre
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sudo apt-get update && sudo apt-get install -y \
-    echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
+RUN echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     sudo apt-get update && \
     sudo apt-get -y install mongodb-org && \
     sudo service mongod start && \
