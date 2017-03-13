@@ -16,7 +16,6 @@ RUN sudo apt-get update && sudo apt-get install -y \
     php5-cli \
     php5-json \
     php5-cgi \
-    php5-pear \
     php5-sqlite && \
     sudo sed -i 's/\/var\/www\/html/\/projects/g'  /etc/apache2/sites-available/000-default.conf && \
     sudo sed -i 's/None/All/g' /etc/apache2/apache2.conf && \
