@@ -7,7 +7,7 @@ RUN sudo apt-get update && sudo apt-get install -y \
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - && \
     sudo apt-get -y install nodejs && \
     sudo apt-get -y install build-essential && \
-    sudo apt-get clean && \
+    sudo apt-get -y clean && \
     sudo apt-get -y autoremove && \
     sudo apt-get -y clean && \
     sudo rm -rf /var/lib/apt/lists/*
