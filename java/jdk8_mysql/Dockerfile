@@ -30,7 +30,8 @@ RUN wget -qO- "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.24/bin/apache
     echo "export MAVEN_OPTS=\$JAVA_OPTS" >> /home/user/.bashrc
 
 
-RUN sudo -E bash -c "apt-get -y --no-install-recommends install mysql-server" && \
+RUN sudo apt-get update && sudo apt-get upgrade && \
+    sudo -E bash -c "apt-get -y --no-install-recommends install mysql-server" && \
     sudo apt-get clean && \
     sudo apt-get -y autoremove && \
     sudo apt-get -y clean && \
