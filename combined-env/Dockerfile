@@ -32,6 +32,13 @@ RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mo
     sudo rm -rf /var/lib/apt/lists/*
 RUN sudo mongod &
 
+RUN sudo apt-get update
+RUN sudo apt-get install apt-transport-https -y
+RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+RUN echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+RUN sudo apt-get update
+RUN sudo apt-get install mono-complete -y
+
 ENV TERM=xterm
 
 LABEL che:server:3000:ref=nodejs che:server:3000:protocol=http che:server:4000:ref=angular che:server:4000:protocol=http che:server:27017:ref=mongod che:server:27017:protocol=mongo
