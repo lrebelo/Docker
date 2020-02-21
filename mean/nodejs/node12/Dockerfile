@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && sudo apt-get install -y \
+RUN apt-get update && apt-get install -y \
     nano \
     curl && \
-    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && \
+    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get -y install nodejs && \
     apt-get -y install build-essential && \
     apt-get -y clean && \
