@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get -y install nodejs && \
     apt-get -y install build-essential && \
+    apt-get -y install git && \
     apt-get -y clean && \
     apt-get -y autoremove && \
     apt-get -y clean && \
-    apt-get -y git && \
     rm -rf /var/lib/apt/lists/*
 
 LABEL che:server:3000:ref=nodejs che:server:3000:protocol=http
