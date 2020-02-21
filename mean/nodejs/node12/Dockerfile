@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     apt-get -y install build-essential && \
     apt-get -y clean && \
     apt-get -y autoremove && \
+    apt-get -y git && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
 
