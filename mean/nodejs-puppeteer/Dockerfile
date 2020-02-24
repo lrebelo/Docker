@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir /home/runuser && \
-    groupadd -r runuser && useradd -r -g runuser -G audio,video runuser -b /home/runuser && \
+    groupadd -r runuser && useradd -r -g runuser -G audio,video runuser -d /home/runuser && \
     chown -R runuser:runuser /home/runuser && \
     mkdir /projects && \
     chown -R runuser:runuser /projects
