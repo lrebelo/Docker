@@ -14,8 +14,10 @@ RUN apt-get update && apt-get install -y \
     apt-get -y autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* && \
-    groupadd -r runuser && useradd -r -g runuser -G audio,video runuser && \
+    mkdir /home/runuser && \
+    groupadd -r runuser && useradd -r -g runuser -G audio,video runuser -b /home/runuser && \
     chown -R runuser:runuser /home/runuser && \
+    mkdir /projects && \
     chown -R runuser:runuser /projects
 
 LABEL che:server:3000:ref=nodejs che:server:3000:protocol=http
