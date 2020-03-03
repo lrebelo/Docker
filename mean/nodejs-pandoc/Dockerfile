@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
     apt-get -y install nodejs && \
     apt-get -y install build-essential && \
     apt-get -y install git && \
-    apt-get -y install libx11-xcb-dev libxcomposite-dev libxcursor-dev libxdamage-dev libxi6 libxtst6 libglib2.0-0 libnss3 libcups2 libxss1 libxrandr2 && \
-    apt-get -y install chromium-browser && \
+    apt-get -y install texlive-xetex && \
     apt-get -y clean && \
     apt-get -y autoremove && \
     apt-get -y clean && \
