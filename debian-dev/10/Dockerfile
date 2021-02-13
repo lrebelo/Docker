@@ -1,5 +1,7 @@
 FROM debian:10
 
+RUN apt-get update
+
 RUN apt-get install -y \
     build-essential=12.3 \
     git=1:2.11.0-3+deb9u7 \
